@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <section>
+                <h1>Listado de bebidas</h1>
+                <div class="d-flex flex-row justify-content-between">
+                    {{#each . }}
+                    <div style="width: 25%;">
+                        <img src="{{img_url}}" alt="{{nombre}}" class="img-fluid">
+                        <a href="/bebidas/{{id}}">
+                            <h3>{{nombre}} </h3>
+                        </a>
+                    </div>
+                    {{/each }}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
