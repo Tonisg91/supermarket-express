@@ -1,0 +1,13 @@
+<h1>Charcuteria</h1>
+<main class="d-flex container">
+
+    {{#each . }}
+    <div>
+        <a href="/charcuteria/{{this.id}}"><img src="{{this.img_url}}" alt="" height="200px" width="200px"></a>
+        <h3>{{this.nombre}}</h3>
+        <h5>Precio:{{this.precio}}</h5>
+    </div>
+    {{/each}}
+
+
+</main>
