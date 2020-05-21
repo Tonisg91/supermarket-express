@@ -1,13 +1,19 @@
 const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
-const limpiezaRouter = require("./router/limpiezaRouter")
-
 const app = express();
+
+const limpiezaRouter = require("./router/limpiezaRouter")
 
 app.use("/limpieza", limpiezaRouter)
 
 //Handlebars - templating / VIEWS
+
+const charcuteriaRouter = require("./routes/charcuteriaRouter");
+//const bodyParser = require("body-parser");
+
+app.use("/charcuteria", charcuteriaRouter);
+
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
