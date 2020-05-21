@@ -2,6 +2,11 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const app = express();
+const bebidasRouter = require('./routes/bebidasRouter');
+
+
+
+app.use('/bebidas', bebidasRouter);
 
 const limpiezaRouter = require("./router/limpiezaRouter")
 
@@ -21,11 +26,6 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-//RUTAS
-
-///  (raiz) >>>> renderizar el archivo index.hbs (handlebars)
-
-// Jabon
 
 
 app.listen(3000, console.log("Listen at port 3000"));
